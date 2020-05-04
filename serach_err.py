@@ -11,7 +11,10 @@ out_str = [
     '\\',
     '|',
     '?',
-    '*',
+    '*'
+]
+
+head = [
     'CON',
     'PRN',
     'AUX',
@@ -35,10 +38,13 @@ out_str = [
     'LPT8',
     'LPT9'
 ]
-
 for f in all_files:
     ff = os.path.basename(f)
     for s in out_str:
         if s in ff:
+            print(f)
+            print(ff)
+    for h in head:
+        if h == ff:
             print(f)
             print(ff)
